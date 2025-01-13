@@ -16,5 +16,8 @@
     "url": "https://github.com/BeauMama/CSE341/issues"
   },
   "homepage": "https://github.com/BeauMama/CSE341#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
