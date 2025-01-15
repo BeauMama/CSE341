@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Launch Program",
+        "type": "node",
+        "request": "launch",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder}/app.js", 
+        "env": {
+          "MONGODB_URI": "mongodb+srv://your-username:your-password@cluster0.mongodb.net/myDatabase",
+          "PORT": "8080"
+        },
+        "outFiles": [
+          "${workspaceFolder}/**/*.js"
+        ]
+      }
+    ]
+  }
