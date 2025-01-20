@@ -5,13 +5,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "devStart": "nodemon server.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BeauMama/CSE341.git"
   },
-  "author": "mandi beauchaine",
+  "author": "Mandi Beauchaine",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BeauMama/CSE341/issues"
@@ -27,8 +30,11 @@
   "devDependencies": {
     "@eslint/js": "^9.18.0",
     "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
     "globals": "^15.14.0",
+    "prettier": "^3.4.2",
     "typescript-eslint": "^8.21.0"
   }
 }
