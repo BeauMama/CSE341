@@ -12,14 +12,13 @@ app
     })
     .use('/', require('./routes'));
 
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
     if(err) {
-        console.error('Error connecting to MongoDB:', err);
-        return;
+         return;
     } else {
-        console.log('Connected to MongoDB');
+        
         app.listen(port);
-        console.log(`Running on port ${port}`);
+        
     }         
 
 });
