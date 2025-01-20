@@ -1,15 +1,26 @@
-http://localhost:8080/contacts/
 
-http://localhost:8080/contacts/6787267906da489a980e7254
+GET http://localhost:8080/contacts/
 
-http://localhost:8080/contacts/6787267906da489a980e7255
+###
 
-http://localhost:8080/contacts/6787267906da489a980e7256
+GET http://localhost:8080/contacts/6787267906da489a980e7254
 
-https://cse341-mandi-beauchaine.onrender.com/contacts/
+###
 
-https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7254
+GET http://localhost:8080/contacts/6787267906da489a980e7255
 
-https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7255
+###
 
-https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7256
+GET http://localhost:8080/contacts/6787267906da489a980e7256
+
+###
+GET https://cse341-mandi-beauchaine.onrender.com/contacts/
+
+###
+GET https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7254
+
+###
+GET https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7255
+
+###
+GET https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7256
