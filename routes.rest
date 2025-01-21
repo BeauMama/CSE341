@@ -24,3 +24,12 @@ GET https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e72
 
 ###
 GET https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7256
+
+###
+POST http://localhost:8080/contacts/
+
+###
+PUT http://localhost:8080/contacts/
+
+###
+DELETE http://localhost:8080/contacts/
