@@ -1,35 +1,70 @@
+//local host
 
+### Get all contacts
 GET http://localhost:8080/contacts/
 
-###
-
+### Get a single contact
 GET http://localhost:8080/contacts/6787267906da489a980e7254
 
-###
+### Create contact
+POST http://localhost:8080/contacts/ http/1.1
+Content-Type: application/json
 
-GET http://localhost:8080/contacts/6787267906da489a980e7255
+{
+    "firstName": "Sonya",
+    "lastName": "Beauchaine",
+    "email": " sonaybeauchaine@example.com",
+    "favoriteColor": "Pink",
+    "birthday": "2011-01-01"
+}
 
-###
+### Put contact
+PUT http://localhost:8080/contacts/6787267906da489a980e7254 http/1.1    
+Content-Type: application/json
 
-GET http://localhost:8080/contacts/6787267906da489a980e7256
+{
+    "firstName": "Mandi",
+    "lastName": "Beauchaine",
+    "email": " mandibeauchaine@example.com",
+    "favoriteColor": "Yellow",
+    "birthday": "1981-01-13"
+}
 
-###
+### Delete contact
+DELETE http://localhost:8080/contacts/67901c6197279e6bf607d2d0 http/1.1
+
+
+
+//Render server
+### Get all contacts
 GET https://cse341-mandi-beauchaine.onrender.com/contacts/
 
-###
+### Get a single contact
 GET https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7254
 
-###
-GET https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7255
+### Create contact
+POST https://cse341-mandi-beauchaine.onrender.com/contacts/ http/1.1
+Content-Type: application/json
 
-###
-GET https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7256
+{
+    "firstName": "Sonya",
+    "lastName": "Beauchaine",
+    "email": " sonaybeauchaine@example.com",
+    "favoriteColor": "Pink",
+    "birthday": "2011-01-01"
+}
 
-###
-POST http://localhost:8080/contacts/
+### Put contact
+PUT https://cse341-mandi-beauchaine.onrender.com/contacts/6787267906da489a980e7254 http/1.1    
+Content-Type: application/json
 
-###
-PUT http://localhost:8080/contacts/
+{
+    "firstName": "Mandi",
+    "lastName": "Beauchaine",
+    "email": " mandibeauchaine@example.com",
+    "favoriteColor": "Yellow",
+    "birthday": "1981-01-13"
+}
 
-###
-DELETE http://localhost:8080/contacts/
+### Delete contact
+DELETE https://cse341-mandi-beauchaine.onrender.com/contacts/67901c6197279e6bf607d2d0 http/1.1
