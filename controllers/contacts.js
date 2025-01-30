@@ -2,6 +2,8 @@ const { response } = require('express');
 const mongodb = require('../db/connect');
 const { ObjectId } = require('mongodb');
 
+const API_KEY = process.env.API_KEY;
+
 const getAll = async (req, res) => {
   try {
 
