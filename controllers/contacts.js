@@ -66,7 +66,7 @@ const updateContact = async (req, res) => {
   const response = await mongodb.getDb().collection('contacts').replaceOne({ _id: userId }, contact );
 
   if (response.modifiedCount > 0) {
-    res.status(204).send();
+    res.status(200).send();
   } else {
     res.status(500).json({ message: 'There was an Error updating contact', error: err });
   }
