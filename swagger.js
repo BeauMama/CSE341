@@ -7,7 +7,7 @@ const doc = {
   },
   host: process.env.RENDER_URL || 'localhost:8080',
   schemes: process.env.RENDER_URL ? ['https'] : ['http'],
-  basePath: process.env.RENDER_URL ? '/api-docs' : '/',
+  basePath: process.env.RENDER_URL ? '/api-docs' : '/api-docs',
 };
 
 const outputFile = './swagger.json';
