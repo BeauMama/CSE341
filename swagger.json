@@ -7,9 +7,9 @@
     },
     "host": "localhost:8080",
     "basePath": "/",
-    "schemes": ["http", "https"],
+    "schemes": ["http"], 
     "paths": {
-      "/contacts/": {
+      "/contacts": {
         "get": {
           "description": "Retrieve all contacts",
           "parameters": [
@@ -38,9 +38,7 @@
                 }
               }
             },
-            "500": {
-              "description": "Internal Server Error"
-            }
+            "500": { "description": "Internal Server Error" }
           }
         },
         "post": {
@@ -63,15 +61,9 @@
             }
           ],
           "responses": {
-            "201": {
-              "description": "Contact created successfully"
-            },
-            "400": {
-              "description": "Bad Request"
-            },
-            "500": {
-              "description": "Internal Server Error"
-            }
+            "201": { "description": "Contact created successfully" },
+            "400": { "description": "Bad Request" },
+            "500": { "description": "Internal Server Error" }
           }
         }
       },
@@ -107,12 +99,8 @@
                 }
               }
             },
-            "404": {
-              "description": "Contact not found"
-            },
-            "500": {
-              "description": "Internal Server Error"
-            }
+            "404": { "description": "Contact not found" },
+            "500": { "description": "Internal Server Error" }
           }
         },
         "put": {
@@ -141,15 +129,33 @@
             }
           ],
           "responses": {
-            "200": {
-              "description": "Contact updated successfully"
+            "200": { "description": "Contact updated successfully" },
+            "400": { "description": "Bad Request" },
+            "500": { "description": "Internal Server Error" }
+          }
+        },
+        "delete": {
+          "description": "Delete a contact by ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string",
+              "description": "ID of the contact to delete"
             },
-            "400": {
-              "description": "Bad Request"
-            },
-            "500": {
-              "description": "Internal Server Error"
+            {
+              "name": "apiKey",
+              "in": "header",
+              "type": "string",
+              "required": true,
+              "description": "API key for authentication"
             }
+          ],
+          "responses": {
+            "200": { "description": "Contact deleted successfully" },
+            "404": { "description": "Contact not found" },
+            "500": { "description": "Internal Server Error" }
           }
         }
       }

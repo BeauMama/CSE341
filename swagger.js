@@ -3,10 +3,10 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'My API',
-    description: 'TContact API',
+    description: 'Contact API',
   },
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: process.env.RENDER_URL || 'localhost:8080',
+  schemes: process.env.RENDER_URL ? ['https'] : ['http'],
 };
 
 const outputFile = './swagger.json';

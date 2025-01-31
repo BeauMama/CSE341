@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const express = require('express');
 const mongodb = require('./db/connect')
 const cors = require('cors');
@@ -12,7 +13,7 @@ app
 .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app
-
+    .use(cors())
     .use(express.json())
     .use((req,res,next)=> {
         res.setHeader('Access-Control-Allow-Origin', '*');
@@ -22,11 +23,13 @@ app
 
 mongodb.initDb((err) => {
     if(err) {
+        
          return;
-    } else {
+    }  
         
-        app.listen(port);
-        
-    }         
+    app.listen(port, () => {
 
+        console.log(`Server is running on port http://localhost:${port}`);     
+        console.log(`Swagger is running on http://localhost:${port}/api-docs`);
+});
 });
