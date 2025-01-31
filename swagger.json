@@ -5,7 +5,8 @@
       "description": "API for managing contacts",
       "version": "1.0"
     },
-    
+    "host": "",
+     "schemes": ["http","https"], 
     "paths": {
       "/contacts": {
         "get": {
