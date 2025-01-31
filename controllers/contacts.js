@@ -40,8 +40,8 @@ const getSingle = async (req, res) => {
 const createContact = async (req, res) => {
   const contact =
   {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    firstName: req.body.firstname,
+    lastName: req.body.lastname,
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday,
