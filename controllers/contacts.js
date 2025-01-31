@@ -57,8 +57,8 @@ const createContact = async (req, res) => {
 const updateContact = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   const contact = {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    firstName: req.body.firstname,
+    lastName: req.body.lastname,
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday,
